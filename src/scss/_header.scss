@@ -1,0 +1,107 @@
+$maxWidth: 1170px;
+$mainTextColor: #ccd6f6;
+$subTextColor: #ccd6f6;
+
+#home {
+    
+    &.container__wrapper {
+        padding: 150px 0;
+        margin: 0 auto;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        min-height: 100vh;
+        text-align: center !important;
+
+        &.bg__image {
+            background-position: 0% 40%;
+            background: #0a192f;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 640px;
+            z-index: 8;
+
+            .header__title,
+            .header__sub__title {
+                display: inline-block;
+                margin-bottom: 10px;
+                border-left: 0;
+                margin-top: 10px;
+            }
+
+            .header__title {
+                color: $mainTextColor;
+                width: 100%;
+                text-align: center;
+                margin-bottom: 0;
+                font-size: 60px;
+                font-weight: bold;
+                letter-spacing: 4px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+                span {
+                    color: $subTextColor;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                }
+
+                @media screen and (max-width: $mobileWidth) {
+                    font-size: 40px;
+                    margin-bottom: 20px;
+                }
+            }
+
+            .header__sub__title {
+                color: $mainTextColor;
+                font-size: 16px;
+                background: #ffffff14;
+                padding: 0 30px;
+                letter-spacing: 1.75px;
+
+                a {
+                    color: $mainTextColor;
+                    transition: 0.2s opacity;
+
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+
+                @media screen and (max-width: $mobileWidth) {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 10px 20px;
+
+                    .divider__line {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .social__wrapper {
+            .social__links {
+                max-width: 150px;
+                text-align: center;
+                margin-top: 30px;
+                display: flex;
+                justify-content: space-between;
+
+                svg.social__link__icon {
+                    fill: $mainTextColor;
+                    height: 44px;
+                    width: 44px;
+                    padding: 10px;
+                    transition: all 0.2s;
+                    &:hover {
+                        opacity: 0.7;
+                        transform: translateY(-2px);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&family=Roboto:wght@100;300;400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;300;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+@import 'variables';
+@import 'navbar';
+@import 'header';
+@import 'about';
+@import 'info';
+@import 'portfolio';
+@import 'footer';
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul,
+ol {
+    padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 400;
+    color: #333;
+    font-family: 'Questrial', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-size: 13px;
+    line-height: 26px;
+    letter-spacing: 0.5px;
+    color: #222;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 70px;
+}
+
+h2 {
+    font-size: 40px;
+    line-height: 52px;
+    border-left: 1px solid $themeColor;
+    padding-left: 20px;
+}
+
+h3 {
+    font-size: 26px;
+    line-height: 36px;
+}
+
+h5 {
+    font-size: 16px;
+    letter-spacing: 5px;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    // font-family: 'Roboto', sans-serif;
+    // font-family: 'Questrial', sans-serif;
+    font-family: 'Catamaran', sans-serif;
+}
+
+span {
+    font-family: 'Questrial', sans-serif;
+}
+
+/* Remove list styles on ul, ol elements */
+ul,
+ol {
+    list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+    margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+.col__1 {
+    width: 8.33%;
+}
+.col__2 {
+    width: 16.66%;
+}
+.col__3 {
+    width: 25%;
+}
+.col__4 {
+    width: 33.33%;
+}
+.col__5 {
+    width: 41.66%;
+}
+.col__6 {
+    width: 50%;
+}
+.col__7 {
+    width: 58.33%;
+}
+.col__8 {
+    width: 66.66%;
+}
+.col__9 {
+    width: 75%;
+}
+.col__10 {
+    width: 83.33%;
+}
+.col__11 {
+    width: 91.66%;
+}
+.col__12 {
+    width: 100%;
+}
+
+span.section__subtitle {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 9px;
+    color: #444;
+}
+
+span.section__subtitle + h2 {
+    margin-top: 15px;
+}
+
+main {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+h2 {
+    margin-bottom: 30px;
+}
+
+.text__highlight {
+    color: $themeColor;
+}
+
+p + p {
+    margin-top: 22px;
+}
+
+.text__darkgrey {
+    color: #333 !important;
+}
+
+.text__lightgrey {
+    color: #ddd !important;
+}
+
+.text__white {
+    color: #fff !important;
+}
+
+.center__margin {
+    margin: 0 auto;
+}
+
+.center__text {
+    text-align: center !important;
+}
+
+.no__border {
+    border: 0 !important;
+}
+
+.hide {
+    display: none;
+}
+
+.hide__element {
+    border: 0;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 350ms ease-in, transform 300ms ease-in;
+}
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(25%);
+    transition: opacity 600ms ease-in, transform 400ms ease-in;
+}
+
+.fade-in-down {
+    opacity: 0;
+    transform: translateY(-15%);
+    transition: opacity 350ms ease-in, transform 300ms ease-in;
+}
+
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-15%);
+    transition: opacity 450ms ease-in, transform 350ms ease-in;
+}
+
+.fade-in-right {
+    opacity: 0;
+    transform: translateX(15%);
+    transition: opacity 450ms ease-in, transform 350ms ease-in;
+}
+
+.fade-in.appear {
+    opacity: 1;
+}
+
+.fade-in-up.appear,
+.fade-in-down.appear {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.fade-in-left.appear,
+.fade-in-right.appear {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+@media only screen and (max-width: 960px) {
+    h2 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .col__12 {
+        max-width: 600px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    body,
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        text-align: center !important;
+    }
+    h1 {
+        font-size: 46px;
+    }
+
+    h2 {
+        font-size: 26px;
+        line-height: 36px;
+        padding-left: 0;
+        border: 0 !important;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    [class*='col__'] {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .text__content {
+        border: 0 !important;
+    }
+
+    .background__split {
+        display: none;
+    }
+    br {
+        display: none;
+    }
+
+    .content__col {
+        padding-right: 0 !important;
+    }
+
+    .image__col {
+        margin-top: 50px;
+        max-width: 400px;
+    }
+
+    #home.container__wrapper .container {
+        max-width: 500px;
+
+        .header__sub__title {
+            font-size: 14px;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    h1 {
+        font-size: 32px;
+    }
+}

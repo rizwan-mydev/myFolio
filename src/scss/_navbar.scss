@@ -1,0 +1,200 @@
+$maxWidth: 1260px;
+$navTextColor: #fff;
+$navTextColorScrolled: #fff;
+$navActiveTextColor: #ccd6f6;
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background: transparent;
+
+    transition: 0.5s all;
+
+    @media screen and (max-width: $mobileWidth) {
+        background: #0a192f;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.02);
+    }
+
+    &.scrolled__navbar {
+        @media screen and (min-width: $mobileWidth) {
+            background: #0a192f;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.02);
+        }
+
+        a {
+            color: $navTextColorScrolled;
+        }
+    }
+
+    .navbar__desktop {
+        max-width: $maxWidth;
+        margin: 0 auto;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+    }
+
+    a {
+        display: block;
+        padding: 15px 20px;
+        text-decoration: none;
+        color: $navTextColor;
+        display: block;
+        transition: all 0.1s ease-in-out;
+        width: fit-content;
+        margin: 0 auto;
+        letter-spacing: 1px;
+
+        &:hover {
+            //color: $navActiveTextColor;
+            color: #64ffda;
+        }
+        &.active {
+            //color: $navActiveTextColor;
+            color: #64ffda;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: $navActiveTextColor;
+            transition: width 0.3s;
+        }
+
+        &:hover::after {
+            width: 0;
+            color: orange;
+            //transition: width .3s;
+        }
+
+    }
+
+    .logo {
+        display: block;
+        float: left;
+        font-size: 2em;
+        padding: 0 20px;
+        text-decoration: none;
+        height: 75%;
+    }
+
+    /* menu */
+
+    .menu {
+        clear: both;
+        max-height: 0;
+        transition: max-height 0.2s ease-out;
+    }
+
+    /* menu icon */
+
+    .menu-icon {
+        cursor: pointer;
+        float: right;
+        padding: 28px 20px;
+        position: relative;
+        user-select: none;
+        margin: 11px 5px;
+    }
+
+    .menu-icon .navicon {
+        background: #fff;
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background 0.2s ease-out;
+        width: 18px;
+    }
+
+    .menu-icon .navicon:before,
+    .menu-icon .navicon:after {
+        background: #fff;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all 0.2s ease-out;
+        width: 100%;
+    }
+
+    .menu-icon .navicon:before {
+        top: 5px;
+    }
+
+    .menu-icon .navicon:after {
+        top: -5px;
+    }
+
+    /* menu btn */
+
+    .menu-btn {
+        display: none;
+    }
+
+    .menu-btn:checked ~ .menu {
+        max-height: 550px;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+        padding-bottom: 20px;
+    }
+
+    .menu-btn:checked ~ .menu-icon .navicon {
+        background: transparent;
+    }
+
+    .menu-btn:checked ~ .menu-icon .navicon:before {
+        transform: rotate(-45deg);
+    }
+
+    .menu-btn:checked ~ .menu-icon .navicon:after {
+        transform: rotate(45deg);
+    }
+
+    .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+    .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+        top: 0;
+    }
+
+    .nav__logo__link {
+        height: 80px;
+        .navbar__logo {
+            height: 75%;
+            position: relative;
+            top: 10px;
+        }
+        .navbar__logo:after {
+            display: none;
+        }
+    }
+
+    @media (min-width: $mobileWidth) {
+        .nav__logo__link {
+            height: 80px;
+            .navbar__logo {
+                height: 75%;
+                position: absolute;
+                top: 10px;
+            }
+        }
+        li {
+            float: left;
+        }
+        a {
+            padding: 30px 20px;
+        }
+        .menu {
+            clear: none;
+            float: right;
+            max-height: none;
+        }
+        .menu-icon {
+            display: none;
+        }
+    }
+}

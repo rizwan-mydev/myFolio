@@ -1,0 +1,37 @@
+#info {
+    background: #fff;
+
+    &.container__wrapper {
+        padding: 50px 20px;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        min-height: calc(100vh - 80px);
+        position: relative;
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+
+            .row {
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                -ms-flex-pack: center;
+                justify-content: center;
+
+                .content__col {
+                    padding-right: 30px;
+                }
+
+                .text__content {
+                    border-right: 1px solid $themeColor;
+                    padding-right: 20px;
+                }
+            }
+        }
+    }
+}
